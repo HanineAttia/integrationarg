@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+
+<BorderPane fx:id="rootPane" prefHeight="900.0" prefWidth="600.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controlleurs.AjouterMaterielcontroller">
+
+    <top>
+        <HBox style="-fx-background-color: #FFFFFF; -fx-padding: 10;">
+            <Button fx:id="hamburgerButton" style="-fx-background-color: transparent;">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@imagehanine/menu.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Label fx:id="pageTitle" prefHeight="42.0" prefWidth="277.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 0 10;" text="Liste des Matériaux">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox fx:id="sidebar" alignment="TOP_CENTER" spacing="10" style="-fx-background-color: #F5F5F5; -fx-min-width: 0; -fx-pref-width: 0;">
+            <ImageView fx:id="logo" fitHeight="150" fitWidth="200">
+                <image>
+                    <Image url="@imagehanine/applogo.png" />
+                </image>
+            </ImageView>
+
+            <Button fx:id="viewMaterialsButton" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT;">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20">
+                        <image>
+                            <Image url="@imagehanine/afficher.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <text>Voir les Matériaux</text>
+            </Button>
+            <Button fx:id="addMaterialButton" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT;">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20">
+                        <image>
+                            <Image url="@imagehanine/ajouter.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <text>Ajouter un Matériel</text>
+            </Button>
+
+            <Pane VBox.vgrow="ALWAYS" />
+
+            <Button fx:id="homeButton" alignment="BOTTOM_LEFT" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT;">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20">
+                        <image>
+                            <Image url="@imagehanine/home.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <text>Accueil</text>
+            </Button>
+        </VBox>
+    </left>
+
+    <right>
+        <VBox fx:id="filterSidebar" alignment="TOP_CENTER" spacing="10" style="-fx-background-color: #F5F5F5; -fx-min-width: 0; -fx-pref-width: 0;" />
+    </right>
+
+    <center>
+        <VBox fx:id="contentPane" style="-fx-background-color: #FFFFFF; -fx-padding: 20;" alignment="TOP_CENTER">
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10;">
+                <Button fx:id="filterButton" text="Filtrer par" style="-fx-background-color: #2196F3; -fx-text-fill: #FFFFFF; -fx-padding: 8 15; -fx-border-radius: 5; -fx-cursor: hand;" />
+                <Label text="Trier par:" style="-fx-font-weight: bold; -fx-font-size: 14px;" />
+                <ComboBox fx:id="sortComboBox" style="-fx-pref-width: 150; -fx-padding: 8; -fx-border-radius: 5; -fx-background-radius: 5;" />
+            </HBox>
+            <GridPane fx:id="addMaterialForm" hgap="10" vgap="10" style="-fx-background-color: #F9F9F9; -fx-padding: 20; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                <Label text="Nom:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <TextField fx:id="nameField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                <Label text="Description:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <TextArea fx:id="descriptionField" GridPane.rowIndex="2" GridPane.columnIndex="1" prefHeight="100" />
+                <Button fx:id="generateDescriptionButton" text="Generate" GridPane.rowIndex="2" GridPane.columnIndex="2" style="-fx-background-color: #FFC107; -fx-text-fill: #FFFFFF; -fx-padding: 5 10; -fx-cursor: hand; -fx-border-radius: 5;" onAction="#generateDescription" />
+                <Label text="URL Image:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <TextField fx:id="imageUrlField" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                <Button fx:id="importImageButton" text="Importer une photo" GridPane.rowIndex="3" GridPane.columnIndex="2" style="-fx-background-color: #2196F3; -fx-text-fill: #FFFFFF; -fx-padding: 5 10; -fx-cursor: hand; -fx-border-radius: 5;" onAction="#importImage" />
+                <Label text="Catégorie:" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <ComboBox fx:id="categoryField" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+                <Label text="Prix:" GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <TextField fx:id="priceField" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+                <Label text="Date Ajout:" GridPane.rowIndex="6" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <DatePicker fx:id="dateAjoutField" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+                <Label text="Quantité:" GridPane.rowIndex="7" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <Spinner fx:id="quantiteField" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+                <Label text="Disponibilité:" GridPane.rowIndex="8" GridPane.columnIndex="0" style="-fx-font-weight: bold;" />
+                <CheckBox fx:id="disponibilityField" GridPane.rowIndex="8" GridPane.columnIndex="1" />
+                <HBox GridPane.rowIndex="9" GridPane.columnIndex="1" GridPane.columnSpan="2" alignment="BOTTOM_RIGHT" spacing="10">
+                    <Button fx:id="submitButton" text="Ajouter" style="-fx-background-color: #4CAF50; -fx-text-fill: #FFFFFF; -fx-padding: 8 15; -fx-cursor: hand; -fx-border-radius: 5;" onAction="#addMaterial" />
+                    <Button fx:id="cancelButton" text="Annuler" style="-fx-background-color: #F44336; -fx-text-fill: #FFFFFF; -fx-padding: 8 15; -fx-cursor: hand; -fx-border-radius: 5;" onAction="#cancelAdd" />
+                </HBox>
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>

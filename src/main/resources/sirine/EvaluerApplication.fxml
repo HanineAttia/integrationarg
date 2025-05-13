@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Controllers.EvaluerApplicationController"
+      alignment="CENTER" spacing="30" style="-fx-padding: 50;" prefWidth="600" prefHeight="400">
+
+    <!-- Titre avec un style élégant et ombré -->
+    <Label text="Notez Nous" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; -fx-font-family: 'Arial'; -fx-effect: dropshadow(gaussian, black, 5, 0.5, 0, 3);" />
+
+    <!-- Container des étoiles avec un espacement et alignement centré -->
+    <HBox spacing="12" alignment="CENTER" fx:id="starsBox" style="-fx-padding: 10;">
+        <!-- Les étoiles seront générées dynamiquement -->
+    </HBox>
+
+    <!-- Affichage de la note -->
+    <Label fx:id="noteLabel" style="-fx-font-size: 20px; -fx-text-fill: #4CAF50; -fx-font-weight: bold;"/>
+
+    <!-- Bouton avec un style moderne et effet de survol -->
+    <Button text="Soumettre" styleClass="button-main" onAction="#submitRating" prefWidth="200"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;
+                   -fx-background-radius: 30; -fx-padding: 10 20; -fx-effect: dropshadow(gaussian, black, 5, 0.4, 0, 3);"/>
+</VBox>

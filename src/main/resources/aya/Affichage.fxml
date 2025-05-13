@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.esprit.controlleurs.aya.Affichercontroller"
+            prefWidth="600" prefHeight="450"
+            style="-fx-background-color: linear-gradient(to bottom right, #E3F2FD, #BBDEFB);">
+
+    <VBox spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="60">
+
+        <!-- ScrollPane contenant la TableView -->
+        <ScrollPane fitToWidth="true" fitToHeight="true" style="-fx-background-color: transparent;">
+            <TableView fx:id="tableUtilisateurs">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colNom" text="Nom" prefWidth="100"/>
+                    <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="100"/>
+                    <TableColumn fx:id="colDate" text="Date de naissance" prefWidth="120"/>
+                    <TableColumn fx:id="colRole" text="Rôle" prefWidth="80"/>
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
+                    <TableColumn fx:id="colMotDePasse" text="Mot de passe" prefWidth="120"/>
+                    <TableColumn fx:id="colPhoto" text="Photo" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </ScrollPane>
+
+    </VBox>
+
+    <!-- Boutons en bas -->
+    <HBox spacing="15" alignment="CENTER_RIGHT"
+          AnchorPane.bottomAnchor="15" AnchorPane.rightAnchor="20">
+        <Button text="Retour" onAction="#retourMenu"
+                style="-fx-background-color: #42A5F5; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+        <Button text="Ajouter" onAction="#ajouterUtilisateur"
+                style="-fx-background-color: #66bb6a; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+        <Button text="Supprimer la sélection" onAction="#supprimerUtilisateur"
+                style="-fx-background-color: #ef5350; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+    </HBox>
+</AnchorPane>

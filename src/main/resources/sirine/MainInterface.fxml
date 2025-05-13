@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="Controllers.MainInterfaceController" prefHeight="600.0" prefWidth="800.0">
+
+    <!-- Image de fond avec superposition -->
+    <ImageView fitWidth="800" fitHeight="600" preserveRatio="false">
+        <image>
+            <Image url="@farming.jpg"/> <!-- Remplacez par votre nouvelle image -->
+        </image>
+    </ImageView>
+
+    <!-- Superposition semi-transparente -->
+    <Pane style="-fx-background-color: rgba(0, 0, 0, 0.5);" />
+
+    <!-- Contenu principal -->
+    <VBox alignment="TOP_CENTER" spacing="40" style="-fx-padding: 60;" prefWidth="600">
+        <!-- Titre avec style élégant -->
+        <Label text="Accueil Réclamations"
+               style="-fx-font-size: 40px; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Arial'; -fx-effect: dropshadow(gaussian, black, 5, 0.5, 0, 2);"/>
+
+        <!-- Conteneur des boutons principaux -->
+        <VBox fx:id="mainVBox" alignment="CENTER" spacing="25">
+            <!-- Boutons stylisés avec de l'espace suffisant -->
+            <Button text="Ajouter Réclamation" styleClass="button-main" onAction="#goToAjoutReclamation" prefWidth="250" />
+            <Button text="Ajouter Motif" styleClass="button-main" onAction="#goToAjoutMotif" prefWidth="250" />
+            <Button text="Ajouter Réponse" styleClass="button-main" onAction="#goToAjoutReponse" prefWidth="250" />
+            <Button text="Mon Tableau" styleClass="button-main" onAction="#goToListAll" prefWidth="250" />
+            <Button text="Évaluer l’application" styleClass="button-main" onAction="#goToEvaluation" prefWidth="250" />
+        </VBox>
+    </VBox>
+
+</StackPane>

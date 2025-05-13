@@ -1,0 +1,190 @@
+/* Root pane styling */
+.root {
+    -fx-background-color: #FFFFFF;
+}
+
+/* Sidebar styling */
+#sidebar {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 20;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* Sidebar buttons */
+#viewMaterialsButton, #addMaterialButton, #editMaterialButton, #deleteMaterialButton, #homeButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+}
+
+#viewMaterialsButton:hover, #addMaterialButton:hover, #editMaterialButton:hover, #deleteMaterialButton:hover, #homeButton:hover {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: #000000;
+}
+
+/* Hamburger button */
+#hamburgerButton {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+    -fx-cursor: hand;
+}
+
+#hamburgerButton:hover {
+    -fx-background-color: #E0E0E0;
+}
+
+/* Page title */
+#pageTitle {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Content pane */
+#contentPane {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+}
+
+/* Form styling */
+#addMaterialForm {
+    -fx-background-color: #F9F9F9;
+    -fx-padding: 20;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-border-radius: 5;
+    -fx-border-color: #E0E0E0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+/* Labels in the form */
+#addMaterialForm .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Text fields */
+#idField, #nameField, #imageUrlField, #categoryField, #priceField {
+    -fx-pref-height: 35;
+    -fx-pref-width: 250;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0);
+}
+
+#idField:focused, #nameField:focused, #imageUrlField:focused, #categoryField:focused, #priceField:focused {
+    -fx-border-color: #4CAF50;
+}
+
+/* TextArea for description */
+#descriptionField {
+    -fx-pref-height: 100;
+    -fx-pref-width: 250;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0);
+}
+
+#descriptionField:focused {
+    -fx-border-color: #4CAF50;
+}
+
+/* DatePicker */
+#dateAchatField {
+    -fx-pref-height: 35;
+    -fx-pref-width: 250;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+}
+
+#dateAchatField:focused {
+    -fx-border-color: #4CAF50;
+}
+
+/* CheckBox */
+#disponibilityField {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Submit button */
+#submitButton {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+#submitButton:hover {
+    -fx-background-color: #45A049;
+}
+
+/* Table view styling */
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+}
+
+.table-view .column-header {
+    -fx-background-color: #F5F5F5;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-padding: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Form styling */
+/*.grid-pane {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.grid-pane .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.grid-pane .text-field {
+    -fx-pref-height: 30;
+    -fx-background-color: #F9F9F9;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 3;
+    -fx-padding: 5;
+}
+
+.grid-pane .button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+    -fx-border-radius: 3;
+}
+
+.grid-pane .button:hover {
+    -fx-background-color: #45A049;
+}*/

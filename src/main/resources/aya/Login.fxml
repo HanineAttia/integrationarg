@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controlleurs.aya.Logincontroller"
+            prefWidth="450" prefHeight="600">
+
+    <!-- Arrière-plan avec une image -->
+    <ImageView fitWidth="450" fitHeight="600" preserveRatio="false">
+        <image>
+            <Image url="@imageaya/s.jpeg" />
+        </image>
+    </ImageView>
+
+    <!-- Conteneur principal -->
+    <VBox alignment="CENTER" spacing="25.0" layoutX="50" layoutY="50"
+          prefWidth="350" prefHeight="500"
+          style="-fx-background-color: rgba(255, 255, 255, 0.85);
+                 -fx-background-radius: 20; -fx-padding: 30;
+                 -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0, 0, 10);">
+
+        <!-- Logo (sera arrondi via code Java) -->
+        <ImageView fx:id="logoImageView" fitHeight="90" fitWidth="90">
+            <image>
+                <Image url="@imageaya/logot.jpeg"/>
+            </image>
+        </ImageView>
+
+        <!-- Titre -->
+        <Label text="Bienvenue sur Terracult"
+               style="-fx-font-size: 26px; -fx-font-family: 'Roboto'; -fx-font-weight: bold; -fx-text-fill: #2e7d32;" />
+
+        <!-- Email -->
+        <TextField fx:id="emailField" promptText="Adresse e-mail" prefHeight="44"
+                   style="-fx-background-radius: 15; -fx-background-color: #ffffff;
+                          -fx-border-color: #a5d6a7; -fx-border-width: 2; -fx-padding: 10;"/>
+
+        <!-- Mot de passe -->
+        <PasswordField fx:id="passwordField" promptText="Mot de passe" prefHeight="44"
+                       style="-fx-background-radius: 15; -fx-background-color: #ffffff;
+                              -fx-border-color: #a5d6a7; -fx-border-width: 2; -fx-padding: 10;"/>
+
+        <!-- Connexion -->
+        <Button text="Connexion" onAction="#handleLogin" prefHeight="44" prefWidth="220"
+                style="-fx-background-color: linear-gradient(to right, #66bb6a, #43a047);
+                       -fx-text-fill: white; -fx-background-radius: 25; -fx-font-size: 15px;
+                       -fx-font-weight: bold;"/>
+
+        <!-- Créer un compte -->
+        <Button text="Créer un compte" onAction="#handleSignup" prefHeight="44" prefWidth="220"
+                style="-fx-background-color: linear-gradient(to right, #81c784, #66bb6a);
+                       -fx-text-fill: white; -fx-background-radius: 25; -fx-font-size: 14px;"/>
+
+        <!-- Lien Mot de passe oublié -->
+        <Hyperlink text="Mot de passe oublié ?" onAction="#handleForgotPassword"
+                   style="-fx-text-fill: #2e7d32; -fx-underline: true; -fx-font-size: 12px;"/>
+    </VBox>
+</AnchorPane>

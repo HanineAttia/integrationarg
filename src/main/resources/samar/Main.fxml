@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.MainController"
+            stylesheets="@style.css">
+    <top>
+        <ToolBar styleClass="toolbar">
+            <Button text="➕ Ajouter Catégorie" onAction="#handleAjouterCategorie" styleClass="main-button"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" VBox.vgrow="ALWAYS">
+            <TableView fx:id="categorieTable" prefHeight="300" prefWidth="600">
+                <columns>
+                    <TableColumn text="Nom" fx:id="nomCol" prefWidth="200"/>
+                    <TableColumn text="Description" fx:id="descCol" prefWidth="400"/>
+                </columns>
+            </TableView>
+            <Button text="🔍 Voir Détails" onAction="#handleVoirDetails" styleClass="secondary-button"/>
+        </VBox>
+    </center>
+</BorderPane>

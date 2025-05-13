@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" style="-fx-background-color: linear-gradient(to bottom right, #64B5F6, #E3F2FD);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controlleurs.aya.Modifierprofilcontrolleur">
+
+    <VBox alignment="TOP_CENTER" layoutX="19.0" layoutY="30.0" prefHeight="540.0" prefWidth="411.0" spacing="20" style="-fx-background-color: rgba(255,255,255,0.85); -fx-background-radius: 20; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 30, 0, 0, 10);">
+
+        <!-- Titre avec logo -->
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 0 10 0 10;">
+            <Region fx:id="leftSpacer" HBox.hgrow="ALWAYS" />
+            <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #388E3C;" text="✏️ Modifier le Profil" />
+            <Region fx:id="middleSpacer" HBox.hgrow="ALWAYS" />
+
+            <!-- Logo dans le coin supérieur droit -->
+            <ImageView fitHeight="40" fitWidth="40">
+                <image>
+                    <Image url="@imageaya/logot.jpeg" />
+                </image>
+            </ImageView>
+        </HBox>
+
+        <!-- Formulaire -->
+        <GridPane hgap="12" style="-fx-background-color: #ffffff; -fx-padding: 25; -fx-background-radius: 14; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 5);" vgap="14">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints /><RowConstraints /><RowConstraints /><RowConstraints />
+                <RowConstraints /><RowConstraints />
+            </rowConstraints>
+
+            <children>
+                <Label text="Nom :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="nomField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Prénom :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="prenomField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Date d'inscription :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <DatePicker fx:id="dateField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Type d'utilisateur :" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <ComboBox fx:id="roleBox" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Agriculteur" />
+                            <String fx:value="Ingénieur" />
+                            <String fx:value="Utilisateur simple" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <Label text="Email :" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Mot de passe :" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <PasswordField fx:id="motDePasseField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+
+        <!-- Boutons -->
+        <HBox alignment="CENTER" spacing="15">
+            <Button onAction="#validerModification" style="-fx-background-color: linear-gradient(to right, #66bb6a, #43a047); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20;" text="💾 Enregistrer" />
+            <Button onAction="#annulerModification" style="-fx-background-color: #cfd8dc; -fx-text-fill: #37474f; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 20;" text="❌ Annuler" />
+        </HBox>
+    </VBox>
+</AnchorPane>

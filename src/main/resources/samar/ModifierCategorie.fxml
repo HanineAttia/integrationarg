@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.ModifierCategorieController"
+      spacing="20" alignment="CENTER"
+      style="-fx-background-color: #f0f4f8; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <Label text="Modifier Catégorie"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <TextField fx:id="nomField"
+               promptText="Nom"
+               style="-fx-font-size: 14px; -fx-padding: 8; -fx-background-color: white;
+                      -fx-background-radius: 8; -fx-border-color: #bdc3c7; -fx-border-radius: 8;"/>
+
+    <TextArea fx:id="descriptionField"
+              promptText="Description"
+              prefRowCount="5"
+              wrapText="true"
+              style="-fx-font-size: 14px; -fx-padding: 8; -fx-background-color: white;
+                     -fx-background-radius: 8; -fx-border-color: #bdc3c7; -fx-border-radius: 8;"/>
+
+    <Button text="✔ Modifier"
+            onAction="#handleModifier"
+            style="-fx-background-color: #27ae60; -fx-text-fill: white;
+                   -fx-font-size: 14px; -fx-font-weight: bold;
+                   -fx-background-radius: 8; -fx-padding: 10 20;"/>
+
+</VBox>

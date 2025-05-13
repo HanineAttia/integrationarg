@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifierRepController" alignment="CENTER" spacing="20" prefWidth="400" prefHeight="400">
+    <stylesheets>
+        <String fx:value="/styles.css"/>
+    </stylesheets>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Modifier une Réponse" styleClass="label-title" style="-fx-font-size: 20;"/>
+
+    <TextArea fx:id="contenuField" promptText="Contenu" wrapText="true"/>
+    <TextField fx:id="idReclamationField" promptText="ID Réclamation"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Enregistrer" styleClass="cnx" onAction="#saveReponse"/>
+        <Button text="Annuler" styleClass="button" onAction="#cancel"/>
+    </HBox>
+
+    <Label fx:id="messageLabel" text="" style="-fx-font-size: 14px;"/>
+</VBox>
