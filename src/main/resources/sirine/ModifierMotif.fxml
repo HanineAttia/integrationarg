@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifierMotifController" alignment="CENTER" spacing="20" prefWidth="400" prefHeight="300">
+    <stylesheets>
+        <String fx:value="/styles.css"/>
+    </stylesheets>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Modifier un Motif" styleClass="label-title" style="-fx-font-size: 20;"/>
+
+    <TextField fx:id="nomField" promptText="Nom du motif"/>
+    <TextArea fx:id="descriptionArea" promptText="Description" wrapText="true"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Enregistrer" styleClass="cnx" onAction="#saveMotif"/>
+        <Button text="Annuler" styleClass="button" onAction="#cancel"/>
+    </HBox>
+
+    <Label fx:id="messageLabel" text="" style="-fx-font-size: 14px;"/>
+</VBox>

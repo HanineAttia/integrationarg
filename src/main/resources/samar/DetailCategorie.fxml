@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.DetailCategorieController"
+      spacing="20" alignment="CENTER"
+      style="-fx-background-color: #f5f7fa; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <Label text="Détail Catégorie"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <VBox spacing="10" alignment="CENTER_LEFT">
+        <Label fx:id="nomLabel"
+               text="Nom : "
+               style="-fx-font-size: 16px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="descriptionLabel"
+               text="Description : "
+               style="-fx-font-size: 16px; -fx-text-fill: #34495e;"/>
+    </VBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="✏ Modifier"
+                onAction="#handleModifier"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;
+                       -fx-background-radius: 8; -fx-padding: 8 20;"/>
+        <Button text="🗑 Supprimer"
+                onAction="#handleSupprimer"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;
+                       -fx-background-radius: 8; -fx-padding: 8 20;"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjoutReclamationController" alignment="CENTER" spacing="20" prefWidth="400" prefHeight="500">
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Titre principal -->
+    <Label text="Ajouter une Réclamation" styleClass="label-title" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #4a4a4a;"/>
+
+    <!-- ID Utilisateur -->
+    <TextField fx:id="idUserField" promptText="ID Utilisateur" style="-fx-font-size: 14px; -fx-padding: 10px;"/>
+
+    <!-- ComboBox pour les motifs -->
+    <ComboBox fx:id="motifCombo" promptText="Choisir un Motif" style="-fx-font-size: 14px; -fx-padding: 10px;"/>
+
+    <!-- Zone de texte pour le contenu -->
+    <TextArea fx:id="contenuArea" promptText="Contenu de la réclamation" wrapText="true" style="-fx-font-size: 14px; -fx-padding: 10px;" prefHeight="100"/>
+
+    <!-- Label pour afficher le statut -->
+    <Label fx:id="statutLabel" text="Statut: En attente" style="-fx-font-size: 14px; -fx-text-fill: #888888;"/>
+
+    <!-- Boutons d'action -->
+    <HBox spacing="20" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+        <Button text="Ajouter" styleClass="cnx" onAction="#addReclamation" style="-fx-font-size: 16px; -fx-padding: 10px 20px;"/>
+        <Button text="Annuler" styleClass="button" onAction="#cancel" style="-fx-font-size: 16px; -fx-padding: 10px 20px;"/>
+    </HBox>
+
+    <!-- Label pour les messages -->
+    <Label fx:id="messageLabel" text="" style="-fx-font-size: 14px; -fx-text-fill: red;"/>
+</VBox>

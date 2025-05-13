@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Stop?>
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListRecController" prefWidth="900" prefHeight="600">
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+    <!-- Fond avec dégradé -->
+    <Rectangle width="900" height="600">
+        <fill>
+            <LinearGradient startX="0" startY="0" endX="1" endY="0">
+                <stops>
+                    <Stop offset="0" color="#e0f7fa"/>
+                    <Stop offset="1" color="#80deea"/>
+                </stops>
+            </LinearGradient>
+        </fill>
+    </Rectangle>
+
+    <!-- Conteneur principal -->
+    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-background-radius: 15;" layoutX="50" layoutY="50" prefWidth="800" prefHeight="500">
+        <effect>
+            <DropShadow radius="10" spread="0.2" color="rgba(0,0,0,0.2)"/>
+        </effect>
+
+        <!-- Titre -->
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="20" right="0" bottom="0" left="0"/>
+            </padding>
+            <Text text="📋" style="-fx-font-size: 24;"/>
+            <Text text="Liste des Réclamations" styleClass="label-title" style="-fx-font-size: 22;"/>
+        </HBox>
+
+        <!-- Tableau -->
+        <TableView fx:id="reclamationsTable" prefHeight="350" prefWidth="750">
+            <columns>
+                <TableColumn fx:id="id_ReclamationColumn" text="ID Reclamation" prefWidth="100"/>
+                <TableColumn fx:id="idUserColumn" text="ID Utilisateur" prefWidth="100"/>
+                <TableColumn fx:id="nomMotifColumn" text="Nom Motif" prefWidth="150"/>
+                <TableColumn fx:id="contenuColumn" text="Contenu" prefWidth="350"/>
+                <TableColumn fx:id="statutColumn" text="Statut" prefWidth="150"/>
+            </columns>
+        </TableView>
+
+        <!-- Boutons -->
+        <HBox spacing="20" alignment="CENTER">
+            <padding>
+                <Insets bottom="20"/>
+            </padding>
+            <Button fx:id="addButton" text="Ajouter Réclamation" styleClass="cnx" onAction="#addReclamation"/>
+            <Button fx:id="modifyButton" text="Modifier" styleClass="cnx" onAction="#modifyReclamation" disable="true"/>
+            <Button fx:id="deleteButton" text="Supprimer" styleClass="cnx" onAction="#deleteReclamation" disable="true"/>
+        </HBox>
+
+        <!-- Message -->
+        <Label fx:id="messageLabel" text="" style="-fx-font-size: 14px;"/>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.MenuPrincipalController">
+    <center>
+        <TabPane fx:id="tabPane">
+            <tabs>
+                <Tab text="Catégories">
+                    <content>
+                        <fx:include source="Main.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Produits">
+                    <content>
+                        <fx:include source="MainApp.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.AjouterCategorieController"
+           style="-fx-background-color: linear-gradient(to bottom, #e0eafc, #cfdef3);">
+
+    <VBox alignment="CENTER" spacing="30">
+        <Label text="Ajouter une Catégorie"
+               style="-fx-font-size: 26px; -fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+
+        <VBox spacing="20" alignment="CENTER"
+              style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0.1, 0, 4); -fx-max-width: 400;">
+
+            <TextField fx:id="nomField"
+                       promptText="Nom de la catégorie"
+                       style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #dcdcdc; -fx-padding: 10; -fx-font-size: 14px;"/>
+
+            <TextArea fx:id="descriptionField"
+                      promptText="Description"
+                      prefRowCount="4"
+                      wrapText="true"
+                      style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #dcdcdc; -fx-padding: 10; -fx-font-size: 14px;"/>
+
+            <Button text="Ajouter"
+                    onAction="#handleAjouter"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 10 20; -fx-font-size: 14px;"
+                    maxWidth="150"/>
+        </VBox>
+    </VBox>
+
+    <padding>
+        <Insets top="50" left="20" right="20" bottom="50"/>
+    </padding>
+</StackPane>

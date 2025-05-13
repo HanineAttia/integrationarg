@@ -1,0 +1,101 @@
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f4f4f4;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #80deea;
+}
+
+.table-cell {
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0.5;
+}
+
+.button {
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-color: #eeeeee;
+    -fx-text-fill: #2c3e50;
+    -fx-pref-width: 250;
+    -fx-pref-height: 40;
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: white;
+}
+
+.alert .dialog-pane {
+    -fx-background-color: white;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 1px;
+}
+
+.cnx {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+.cnx:hover {
+    -fx-background-color: #1976D2;
+}
+
+.label-title {
+    -fx-font-size: 36px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-padding: 15 30;
+    -fx-background-radius: 15;
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 1, 1);
+
+    .my-container {
+        -fx-padding: 20;
+    }
+
+    .my-label {
+        -fx-padding: 5;
+    }
+    .label-title {
+        -fx-font-size: 24px; /* Taille de la police */
+        -fx-font-weight: bold; /* Met le texte en gras */
+        -fx-font-family: "Arial"; /* Police personnalisée */
+        -fx-text-fill: #333333; /* Couleur du texte */
+        -fx-alignment: center; /* Centre le texte */
+        -fx-padding: 10; /* Ajoute de l'espace autour du texte */
+    }
+    .label-title:hover {
+        -fx-text-fill: #007acc; /* Change la couleur du texte au survol */
+        -fx-font-size: 26px; /* Augmente légèrement la taille du texte */
+    }
+    .button-main {
+        -fx-background-color: #0066cc;
+        -fx-text-fill: white;
+        -fx-font-size: 16px;
+        -fx-padding: 10px 20px;
+        -fx-background-radius: 10;
+    }
+    .button-main {
+        -fx-background-color: #4CAF50;
+        -fx-text-fill: white;
+        -fx-padding: 10px 20px;
+    }
+}

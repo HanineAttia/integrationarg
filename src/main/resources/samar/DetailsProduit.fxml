@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="controllers.DetailsProduitController"
+          alignment="CENTER"
+          hgap="20" vgap="15"
+          style="-fx-background-color: #f9f9f9; -fx-padding: 30; -fx-border-color: #dcdcdc; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <!-- Colonnes ajustées -->
+    <columnConstraints>
+        <ColumnConstraints minWidth="120"/>
+        <ColumnConstraints minWidth="250"/>
+    </columnConstraints>
+
+    <!-- Titre -->
+    <Label text="Détails du Produit"
+           GridPane.columnSpan="2"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"
+           GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
+    <!-- Nom -->
+    <Label text="Nom :" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"
+           GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Label fx:id="nameLabel" style="-fx-text-fill: #2c3e50;" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <!-- Prix -->
+    <Label text="Prix Unitaire :" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"
+           GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Label fx:id="priceLabel" style="-fx-text-fill: #2c3e50;" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <!-- Catégorie -->
+    <Label text="ID Catégorie :" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"
+           GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Label fx:id="categoryLabel" style="-fx-text-fill: #2c3e50;" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <!-- Boutons -->
+    <Button text="✏️ Modifier"
+            onAction="#modifierProduit"
+            style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;"
+            GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+
+    <Button text="🗑️ Supprimer"
+            onAction="#supprimerProduit"
+            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;"
+            GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <!-- Ajouter au Panier -->
+    <Button fx:id="ajouterPanierButton" text="Ajouter au panier" onAction="#ajouterAuPanier" />
+
+</GridPane>
+

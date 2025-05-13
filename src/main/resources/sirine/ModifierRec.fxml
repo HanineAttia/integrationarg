@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifierRecController" alignment="CENTER" spacing="20" prefWidth="400" prefHeight="400">
+    <stylesheets>
+        <String fx:value="/styles.css"/>
+    </stylesheets>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Modifier une Réclamation" styleClass="label-title" style="-fx-font-size: 20;"/>
+
+    <TextField fx:id="idUserField" promptText="ID Utilisateur"/>
+    <ComboBox fx:id="motifCombo" promptText="Motif"/>
+    <TextArea fx:id="contenuArea" promptText="Contenu" wrapText="true"/>
+    <TextField fx:id="statutField" promptText="Statut"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Enregistrer" styleClass="cnx" onAction="#saveReclamation"/>
+        <Button text="Annuler" styleClass="button" onAction="#cancel"/>
+    </HBox>
+
+    <Label fx:id="messageLabel" text="" style="-fx-font-size: 14px;"/>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjoutReponseController" alignment="CENTER" spacing="20" prefWidth="400" prefHeight="350">
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Ajouter une Réponse" styleClass="label-title" style="-fx-font-size: 20;"/>
+
+    <TextField fx:id="idReclamationField" promptText="ID Réclamation"/>
+    <TextArea fx:id="contenuArea" promptText="Contenu" wrapText="true"/>
+
+    <!-- Bouton pour générer une idée de SMS -->
+    <Button text="Générer une idée de SMS" styleClass="button" onAction="#generateSmsIdea"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Ajouter" styleClass="cnx" onAction="#addReponse"/>
+        <Button text="Annuler" styleClass="button" onAction="#cancel"/>
+    </HBox>
+
+    <Label fx:id="messageLabel" text="" style="-fx-font-size: 14px;"/>
+</VBox>
